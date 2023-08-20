@@ -37,11 +37,10 @@ test("renders the summary test passed as prop", () => {
 });
 
 test("renders default image when image is not defined", () => {
-    render(<Episode episode={testEpisodeWithoutImage}/>);
-    const image = screen.queryByAltText('./stranger_things.png');
+    render(<Episode episode={testEpisodeWithoutImage} />);
+    const image = screen.getByAltText('https://i.ibb.co/2FsfXqM/stranger-things.png');
     expect(image).toBeInTheDocument();
-
-});
+  });
 
 // ----- EXAMPLE EPISODE TEST OBJECT -----
 // const exampleEpisodeData = {
